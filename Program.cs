@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq; //may not need?
 using System.Threading.Tasks;
+using MenuGroup;
 
 namespace LaundrySimulator
 {
@@ -15,14 +16,11 @@ namespace LaundrySimulator
 
             // might need this -> ? Console.ReadKey();
 
-            Console.WriteLine("Make your selection:"); //maybe make a seperate class for this that displays the main menu
-            Console.WriteLine("\n");
-            Console.WriteLine("1.) Do Your Laundry"); // will link to the main gameplay loop
-            Console.WriteLine("2.) About/How to play");
-            Console.WriteLine("3.) Exit");
+            Menus main = new Menus();
+            Console.WriteLine(); // LEFT OFF HERE -- WORKING ON DISPLAYING MENU
 
             //after choosing option 1:
-            Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
+             Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
                 "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide" +
                 "to do some laundry."); // I may put this text before the menu selection to give the user an intro.
             

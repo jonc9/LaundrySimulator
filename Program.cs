@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq; //may not need?
+using System.Text;
 using System.Threading.Tasks;
-using MenuGroup;
+//using MenuGroup; //may need to remove
 
 namespace LaundrySimulator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -16,14 +17,52 @@ namespace LaundrySimulator
 
             // might need this -> ? Console.ReadKey();
 
-            Menus main = new Menus();
+            Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
+               "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide " +
+               "to do some laundry." + "\n"); // I may put this text before the menu selection to give the user an intro.
+
+            Console.WriteLine("\n");
+
+            Console.WriteLine("1.) Do Your Laundry"); // will link to the main gameplay loop
+            Console.WriteLine("\n");
+
+            Console.WriteLine("2.) About/How to play");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("3.) Exit aka Give up on wearing clean clothes tomorrow.");
+            var userInput = int.Parse(Console.ReadLine());
+            
+            switch (userInput)
+            {
+                case 1:
+                    Console.WriteLine("Okay. It is laundry time!");
+
+                    break;
+                
+                case 2:
+                    Console.WriteLine("This is a version of a silly idea I had I wanted to do for my final project. However, what I wanted to do " +
+                "was going to take longer than ancitipated... This version you have limited options as to what you can do. The README will " +
+                "have more information.");
+                    break;
+
+                case 3:
+                    Console.WriteLine("\n" + "I guess this is goodbye. Have fun being smelly!");
+                    System.Environment.Exit(0);
+                    ;
+                    break;
+
+                default:
+                    Console.WriteLine("Try again, please.");
+                    break;
+
+            }
+
+
             Console.WriteLine(); // LEFT OFF HERE -- WORKING ON DISPLAYING MENU
 
             //after choosing option 1:
-             Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
-                "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide" +
-                "to do some laundry."); // I may put this text before the menu selection to give the user an intro.
             
         }
+        
     }
 }

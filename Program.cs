@@ -19,44 +19,54 @@ namespace LaundrySimulator
 
             Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
                "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide " +
-               "to do some laundry." + "\n"); // I may put this text before the menu selection to give the user an intro.
-
-            Console.WriteLine("\n");
-
-            Console.WriteLine("1.) Do Your Laundry"); // will link to the main gameplay loop
-            Console.WriteLine("\n");
-
-            Console.WriteLine("2.) About/How to play");
-            Console.WriteLine("\n");
-
-            Console.WriteLine("3.) Exit aka Give up on wearing clean clothes tomorrow.");
-            var userInput = int.Parse(Console.ReadLine());
+               "to do some laundry." + "\n" + "Or do you?"); // I may put this text before the menu selection to give the user an intro.
             
-            switch (userInput)
+            static void MainMenu()
             {
-                case 1:
-                    Console.WriteLine("Okay. It is laundry time!");
-
-                    break;
                 
-                case 2:
-                    Console.WriteLine("This is a version of a silly idea I had I wanted to do for my final project. However, what I wanted to do " +
-                "was going to take longer than ancitipated... This version you have limited options as to what you can do. The README will " +
-                "have more information.");
-                    break;
+                Console.WriteLine("\n");
+                Console.WriteLine("Make your choice by entering a numerical digit. Nothing more.");
+                Console.WriteLine("\n");
+                TopOfMenu:
+                Console.WriteLine("1.) Do Your Laundry"); // will link to the main gameplay loop
+                Console.WriteLine("\n");
 
-                case 3:
-                    Console.WriteLine("\n" + "I guess this is goodbye. Have fun being smelly!");
-                    System.Environment.Exit(0);
-                    ;
-                    break;
+                Console.WriteLine("2.) About/How to play");
+                Console.WriteLine("\n");
 
-                default:
-                    Console.WriteLine("Try again, please.");
-                    break;
+                Console.WriteLine("3.) Exit aka Give up on wearing clean clothes tomorrow.");
+                Console.WriteLine("\n");
+                var userInput = int.Parse(Console.ReadLine());
 
+                switch (userInput)
+                {
+                    case 1:
+                        Console.WriteLine("Okay. It is laundry time!");
+
+                        break;
+
+                    case 2:
+                        Console.WriteLine("This is a version of a silly idea I had I wanted to do for my final project. However, what I wanted to do " +
+                    "was going to take longer than ancitipated... This version you have limited options as to what you can do. The README will " +
+                    "have more information.");
+                        System.Threading.Thread.Sleep(2000);
+                        goto TopOfMenu;
+                        
+
+                    case 3:
+                        Console.WriteLine("\n" + "I guess this is goodbye. Have fun being smelly!");
+                        System.Environment.Exit(0);
+                        ;
+                        break;
+
+                    default:
+                        Console.WriteLine("Try again, please.");
+                        break;
+
+                }
             }
 
+            MainMenu();
 
             Console.WriteLine(); // LEFT OFF HERE -- WORKING ON DISPLAYING MENU
 

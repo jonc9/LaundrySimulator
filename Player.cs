@@ -2,14 +2,26 @@
 using System.Collections.Generic;
 using System.Linq; //may not need?
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LaundrySimulator
 {
     public class Player : Inventory
     {
-        string name = Console.ReadLine();
+        public string name;
+        
+        public void playerName(string playerName)
+        {
+            Console.WriteLine("What is your name?");
+            Console.ReadLine();
+            name = playerName;
+            playerName = Console.ReadLine();
+        }
+    }
+}
 
-        public Player(string name)
+    /*public Player(string name)
+    { 
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -18,7 +30,6 @@ namespace LaundrySimulator
 
             this.name = name;
         }
-    }
+    }*/
 
-}
 

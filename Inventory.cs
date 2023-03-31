@@ -24,9 +24,7 @@ namespace LaundrySimulator
             "Pair of Levi's",
             "Another black polo shirt",
             "Sailor Moon t-shirt (with Sailor Saturn because she's your favorite)"
-        };
-        
-        
+        };        
     }
 }
 

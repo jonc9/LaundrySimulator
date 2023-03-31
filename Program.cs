@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq; //may not need?
 using System.Threading.Tasks;
+using System.Xml.Linq;
 //using MenuGroup; //may need to remove
 
 namespace LaundrySimulator
@@ -15,6 +16,12 @@ namespace LaundrySimulator
             //maybe have some kind of logo? like ascii or something that pulls from a text file or however it'd work
 
             // might need this -> ? Console.ReadKey();
+            Player playerName = new Player();
+            
+            //Console.WriteLine("What is your name?");
+            //Console.WriteLine("\n");
+            Console.WriteLine(playerName);
+            Console.WriteLine($"Your name is " + playerName + ", " + "corret?");
 
             Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
                "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide " +
@@ -70,13 +77,13 @@ namespace LaundrySimulator
                 foreach (string item in inventory.clothes1)
                 {
                     Console.WriteLine(item);
-
                 }
+                // give option to wash clothes
 
             }
 
             MainLoop();
-
+           
 
 
             

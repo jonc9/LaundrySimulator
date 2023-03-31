@@ -19,7 +19,7 @@ namespace LaundrySimulator
             Console.WriteLine("Welcome! We all know doing laundry is most peoples favorite pasttime. Even yours. Unfortunately," +
                "you just had a long day and you realize you don't have any clothes for tomorrow. Begrudgedly you dig deep and decide " +
                "to do some laundry." + "\n" + "Or do you?"); // I may put this text before the menu selection to give the user an intro.
-            
+
             static void MainLoop()
             {
 
@@ -41,7 +41,8 @@ namespace LaundrySimulator
                 {
                     case 1:
                         Console.WriteLine("Okay. It is laundry time!");
-                        System.Threading.Thread.Sleep(5000);
+                        Console.WriteLine("\n");
+                        System.Threading.Thread.Sleep(3000);
                         goto Option1Chosen;
 
                     case 2:
@@ -64,11 +65,20 @@ namespace LaundrySimulator
                         break;
                 }
             Option1Chosen:;
-                clothes1.Inventory
+                Inventory inventory = new Inventory();
+
+                foreach (string item in inventory.clothes1)
+                {
+                    Console.WriteLine(item);
+
+                }
 
             }
 
             MainLoop();
+
+
+
             
             
         }

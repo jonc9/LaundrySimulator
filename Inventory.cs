@@ -20,7 +20,7 @@ namespace LaundrySimulator
             "Dress slacks (not pleated, still run of the mill variety)",
             "More boxer briefs",
             "Black polo shirt",
-            "Limp Bizkit t-shirt (not from your youth. Your favorite song is 'Break Stuff'",
+            "Limp Bizkit t-shirt (not from your youth. Your favorite song is 'Break Stuff')",
             "Pair of Levi's",
             "Another black polo shirt",
             "Sailor Moon t-shirt (with Sailor Saturn because she's your favorite)"

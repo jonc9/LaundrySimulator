@@ -43,7 +43,7 @@ namespace LaundrySimulator
                     case 1:
                         Console.WriteLine("Okay. It is laundry time!");
                         Console.WriteLine("\n");
-                        Console.WriteLine("Here are the clothes you find in your laundry basket:");
+                        Console.WriteLine("Here are the clothes you find in your laundry basket:" + "\n");
                         System.Threading.Thread.Sleep(1000);
                         goto Option1Chosen;
 
